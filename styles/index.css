@@ -1,0 +1,226 @@
+/* Custom reset */
+html {
+  height: 100%;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6, small, i, em, b, strong, input, button, kbd {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input, button {
+  font: inherit;
+}
+
+button {
+  border: none;
+
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* Main styles */
+body {
+  font-family: 'Lato', sans-serif;
+
+  background-color: #f7f7f7;
+}
+
+.app {
+  width: 100%;
+  max-width: 21.875em;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 2rem 0 5rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.panel:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.panel-title {
+  padding-bottom: 0.625em;
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+  font-size: 1.1875em;
+
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.panel-title-balance {
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  font-size: 1em;
+  text-transform: uppercase;
+
+  border-bottom: none;
+}
+
+.balance {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.balance-sources {
+  display: flex;
+  justify-content: stretch;
+  padding: 1.25em;
+  margin-top: 2rem;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.balance-source {
+  flex: 1;
+
+  text-align: center;
+}
+
+.balance-source:not(:last-child) {
+  border-right: 1px solid #dedede;
+}
+
+.balance-source-type {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.balance-source-amount {
+  display: inline-block;
+  margin-top: 0.5rem;
+
+  font-size: 1.25em;
+  letter-spacing: 0.1rem;
+}
+
+.balance-source-amount-income {
+  color: #2ecc71;
+}
+
+.balance-source-amount-expense {
+  color: #c0392b;
+}
+
+.transaction {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.625em;
+  margin: 1rem 0;
+
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.transaction-income {
+  border-right: 0.5rem solid #2ecc71;
+}
+
+.transaction-expense {
+  border-right: 0.5rem solid #c0392b;
+}
+
+.transaction:hover .transaction-delete-button {
+  opacity: 1;
+}
+
+.transaction-delete-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+
+  padding: 0.3rem 0.7rem;
+
+  color: #ffffff;
+  font-size: 1.25em;
+
+  background-color: #e74c3c;
+
+  opacity: 0;
+
+  transition: opacity 250ms;
+}
+
+.new-transaction-panel {
+  margin-bottom: 6rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  margin: 1rem 0;
+}
+
+.field-input {
+  padding: 1rem;
+
+  border: 1px solid #dedede;
+}
+
+.button {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+
+  color: #ffffff;
+
+  background-color: #9c88ff;
+}

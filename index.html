@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+
+  <script src="/scripts/index.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">Expense tracker</h1>
+  </header>
+
+  <main class="app">
+    <section class="panel balance-panel">
+      <div class="overall-balance">
+        <h2 class="panel-title panel-title-balance">Your balance</h2>
+        <b id="overall-balance" class="balance">$0.00</b>
+      </div>
+
+      <ul class="balance-sources">
+        <li class="balance-source">
+          <h3 class="balance-source-type">Income</h3>
+          <b id="overall-income" class="balance-source-amount balance-source-amount-income">$0.00</b>
+        </li>
+
+        <li class="balance-source">
+          <h3 class="balance-source-type">Expense</h3>
+          <b id="overall-expenses" class="balance-source-amount balance-source-amount-expense">$0.00</b>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel history-panel">
+      <h2 class="panel-title">History</h2>
+
+      <ul id="transaction-history" class="transaction-history"></ul>
+    </section>
+
+    <section class="panel new-transaction-panel">
+      <form id="new-transaction-form">
+        <h2 class="panel-title">Add new transaction</h2>
+
+        <label class="field">
+          <span class="field-label">Text</span>
+          <input class="field-input" type="text" name="text" placeholder="Enter text..." autocomplete="off" required>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Amount<br>(negative - expense, positive - income)</span>
+          <input class="field-input" type="number" name="amount" placeholder="Enter amount..." step="0.01" required>
+        </label>
+
+        <button class="button">Add transaction</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
